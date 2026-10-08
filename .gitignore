@@ -1,0 +1,29 @@
+# Virtual environment
+.venv/
+
+# Dataset - do not upload
+data/raw/
+data/train/
+data/validation/
+data/test/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Trained models
+*.h5
+*.keras
+
+# Generated results
+results/
+
+# VS Code settings
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store

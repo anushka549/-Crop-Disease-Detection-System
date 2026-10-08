@@ -19,7 +19,7 @@ Visible crop symptoms can be difficult to identify consistently. This project ex
 - Prediction top-three results and recent local prediction history in Streamlit.
 
 ## Dataset and 15 classes
-Uses the existing PlantVillage dataset under data/raw/PlantVillage and prepared folders data/train, data/validation, and data/test. The scripts do not download a dataset. The current split contains 14,440 training images, 3,089 validation images, and 3,109 test images (20,638 total). This is below the approximate 22,638 noted in the project brief, so the existing split should be reconciled with the raw dataset before interpreting metrics.
+Uses the existing PlantVillage dataset under data/raw/PlantVillage and prepared folders data/train, data/validation, and data/test. The scripts do not download a dataset. The verified split contains 14,440 training images, 3,089 validation images, and 3,109 test images (20,638 total) across all 15 classes. The raw dataset contains the same 20,638 supported images, so the existing split is complete; no re-splitting is needed.
 
 1. Pepper__bell___Bacterial_spot
 2. Pepper__bell___healthy

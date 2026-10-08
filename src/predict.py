@@ -20,10 +20,13 @@ def preprocess_image(image_path):
 def main():
     parser = argparse.ArgumentParser(description="Classify a crop leaf image")
     parser.add_argument("image_path", help="Path to a JPG, JPEG, or PNG image")
+    parser.add_argument("--model", type=Path, help="Optional path to a saved .keras model")
     args = parser.parse_args()
     final = PROJECT_ROOT / "models" / "final_crop_disease_model.keras"
     best = PROJECT_ROOT / "models" / "best_crop_disease_model.keras"
-    model_path = final if final.exists() else best
+    model_path = args.model.expanduser().resolve() if args.model else (final if final.exists() else best)
+    if args.model and not model_path.is_file():
+        parser.error(f"Model file not found: {model_path}")
     if not model_path.exists():
         parser.error("No trained model found. Run python src/train.py first.")
     try:
